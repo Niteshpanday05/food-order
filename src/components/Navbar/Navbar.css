@@ -1,0 +1,64 @@
+.navbar{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar-logo{
+    width:15px;
+
+}
+
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size:18px;
+     border-bottom: 2px solid transparent;
+}
+
+.navbar-right{
+    display:flex;
+    align-items: center;
+    gap:30px;
+}
+
+.navbar button{
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 6px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+.navbar button:hover{
+    background-color: rgba(224, 47, 16, 0.267);
+}
+
+.navbar .active{
+    padding-bottom: 1px;
+    border-bottom: 2px solid  #49557e;
+}
+
+.navbar li{
+    cursor: pointer;
+}
+
+.navbar-serach-icon{
+    position:relative;
+}
+
+.navbar-serach-icon .dot{
+    position: absolute;
+    min-width:10px ;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
