@@ -122,6 +122,7 @@ export const food_list = [
         name: "Greek salad",
         image: food_1,
         price: 12,
+        oldPrice:20,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Salad"
     },
@@ -130,6 +131,7 @@ export const food_list = [
         name: "Veg salad",
         image: food_2,
         price: 18,
+         oldPrice:20,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Salad"
     }, {
@@ -137,6 +139,7 @@ export const food_list = [
         name: "Clover Salad",
         image: food_3,
         price: 16,
+         oldPrice:20,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Salad"
     }, {
@@ -144,6 +147,7 @@ export const food_list = [
         name: "Chicken Salad",
         image: food_4,
         price: 24,
+         oldPrice:20,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Salad"
     }, {
@@ -151,6 +155,7 @@ export const food_list = [
         name: "Lasagna Rolls",
         image: food_5,
         price: 14,
+         oldPrice:20,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Rolls"
     }, {
