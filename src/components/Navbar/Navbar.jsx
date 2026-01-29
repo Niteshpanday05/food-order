@@ -10,13 +10,13 @@ const Navbar = () => {
       <img src={assets.logo} alt="" className="logo" />
       <ul className="navbar-menu">
         {menus.map((item) => (
-          <li
+          <Link
             key={item}
             className={menu === item ? "active" : ""}
             onClick={() => setMenu(item)}
           >
              {item.charAt(0).toUpperCase() + item.slice(1)}
-          </li>
+          </Link>
         ))}
       </ul>
       <div className="navbar-right">
