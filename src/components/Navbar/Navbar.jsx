@@ -11,11 +11,11 @@ const Navbar = () => {
     { name: "menu", path: "/menu" },
     { name: "services", path: "/services" },
   ];
-  const [menu, setMenu] = useState("Home");
+  
   return (
     <div className="navbar">
       <img src={assets.logo} alt="" className="logo" />
-      import {NavLink} from "react-router-dom";
+      
       <ul className="navbar-menu">
         {menus.map((item) => (
           <NavLink
