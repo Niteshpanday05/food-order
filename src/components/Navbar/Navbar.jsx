@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 const Navbar = ({setShowLogin}) => {
   const menus = [
@@ -14,7 +14,7 @@ const Navbar = ({setShowLogin}) => {
   
   return (
     <div className="navbar">
-      <img src={assets.logo} alt="" className="logo" />
+     <Link to='/'><img src={assets.logo} alt="" className="logo" /></Link> 
       
       <ul className="navbar-menu">
         {menus.map((item) => (
@@ -30,7 +30,7 @@ const Navbar = ({setShowLogin}) => {
       <div className="navbar-right">
         <img src={assets.search_icon} alt="" />
         <div className="navbar-serach-icon">
-          <img src={assets.basket_icon} />
+         <Link to='/cart'> <img src={assets.basket_icon} alt="" /></Link>
           <div className="dot"></div>
         </div>
         <button onClick={()=>setShowLogin(true)}>signin</button>
