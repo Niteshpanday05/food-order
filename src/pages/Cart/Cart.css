@@ -51,6 +51,9 @@
     font-weight: 400;
     margin-bottom: 40px;
 }
+.cart-total h2{
+    font-weight: 400;
+}
 
 .cart-total-detail{
     display: flex;
@@ -59,7 +62,9 @@
 }
 
 .cart-total hr{
-    margin: 6px 0px;
+    height: 1px;
+    background-color: #e2e2e2;
+    border: none;
 }
 
 .cart-total button{
