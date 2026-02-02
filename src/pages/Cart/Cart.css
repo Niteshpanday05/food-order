@@ -46,6 +46,12 @@
     gap: 20px;
 }
 
+.place-order .title{
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
 .cart-total-detail{
     display: flex;
     justify-content: space-between;
@@ -53,7 +59,7 @@
 }
 
 .cart-total hr{
-    margin: 10px 0px;
+    margin: 6px 0px;
 }
 
 .cart-total button{
@@ -73,6 +79,8 @@
 .cart-promocode p{
     color: #555;
 }
+
+
 
 .cart-promocode-input{
     margin-top: 10px;
