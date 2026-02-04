@@ -27,6 +27,8 @@
 
 .footer-content-left h2, .footer-content-center h2, .footer-content-right h2{
     color: white;
+    font-size: 20px;
+    font-weight: 300;
 }
 .footer-content-center li, .footer-content-left li, .footer-content-right li{
  list-style: none;
@@ -34,11 +36,18 @@
     cursor: pointer;
 }
 
-.footer-social-icon{
-    width: 40px;
+.footer-social-icons{
     margin-right: 15px;
+    display: flex;
+    gap: 10px;
 
     
+}
+
+.footer-social-icons img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
 }
 
 .footer hr{

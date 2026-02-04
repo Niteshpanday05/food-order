@@ -1,0 +1,16 @@
+.categories button {
+  margin: 4px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.categories .active {
+  background: black;
+  color: white;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}

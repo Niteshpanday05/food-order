@@ -8,6 +8,7 @@ import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
 import Footer from "./components/Footer/Footer";
 import LoginPopup from "./components/LoginPopup/LoginPopup";
 import About from "./pages/About/About";
+import Menu from "./pages/Menu/Menu";
 
 const App = () => {
 
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
           <Route path="/about" element={<About />} />
+           <Route path="/menu" element={<Menu />} />
 
         </Routes>
       </div>
