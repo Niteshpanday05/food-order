@@ -7,7 +7,7 @@
 
 /* Hero */
 .contact-hero {
-  background: linear-gradient(135deg, #f97316, #fb923c);
+  background: tomato;
   color: white;
   padding: 80px 20px 120px;
   text-align: center;
@@ -110,7 +110,7 @@
 
 .contact-form button {
   width: 100%;
-  background: linear-gradient(135deg, #f97316, tomato);
+  background:  tomato;
   border: none;
   color: white;
   padding: 14px;
