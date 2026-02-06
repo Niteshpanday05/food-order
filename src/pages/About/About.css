@@ -43,6 +43,7 @@
   text-align: center;
   font-size: 34px;
   margin-bottom: 25px;
+  color: tomato;
 }
 
 .section-text {
@@ -147,6 +148,6 @@
 }
 
 .faq-item p {
-  color: #666;
+  color: #443a3a;
   line-height: 1.6;
 }
