@@ -6,7 +6,7 @@ const About = () => {
 
       {/* HERO */}
       <section className="about-hero">
-        <h1>About FoodieExpress</h1>
+        <h1>Food Express</h1>
         <p>
           Delivering happiness at your doorstep with fresh food, fast delivery,
           and trusted local restaurants.

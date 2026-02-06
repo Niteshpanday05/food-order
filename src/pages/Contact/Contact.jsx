@@ -11,10 +11,10 @@ const Contact = () => {
       {/* Hero */}
       <div className="contact-hero">
         <h1>Need Help?</h1>
-        <p>We’re always here to make your food experience better 🍔</p>
+        <p>We’re always here to make your food experience better </p>
 
         <div className="support-buttons">
-          <a href="tel:+9779800000000">📞 Call</a>
+          <a href="tel:+9779800000000">📞Call</a>
           <a href="mailto:support@foodieexpress.com">📧 Email</a>
           <a href="#">💬 Chat</a>
         </div>
