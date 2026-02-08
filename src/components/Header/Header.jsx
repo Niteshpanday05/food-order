@@ -14,7 +14,7 @@ const Header = () => {
         </p>
         
 
-        <Button as={Link} to="/menu" variant="outline">
+        <Button as={Link} to="/menu" variant="primary">
           Explore Menu
         </Button>
       </div>

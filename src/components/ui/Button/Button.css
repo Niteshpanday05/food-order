@@ -6,7 +6,7 @@
   gap: 8px;
 
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
 
@@ -27,7 +27,7 @@
 
 /* Sizes */
 .btn--sm {
-  padding: 4px 10px;
+  padding: 6px 14px;
   font-size: 14px;
 }
 
@@ -63,13 +63,13 @@
 }
 
 .btn--outline {
-  background: white;
-  border: 1px solid black;
-  color: black;
+  /* background: transparent; */
+  border: 1px solid #ff6347;
+  color: #ff6347;
 }
 
 .btn--outline:hover:not(:disabled) {
-  background-color: rgba(255, 99, 71, 0.08);
+  background-color: rgba(236, 227, 225, 0.08);
 }
 
 .btn--danger {
@@ -96,4 +96,3 @@
     transform: rotate(360deg);
   }
 }
-
