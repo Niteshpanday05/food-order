@@ -11,7 +11,9 @@
   color: white;
   padding: 80px 20px 120px;
   text-align: center;
-  background-image: url("../../assets/about.jpg");
+  background-image: url("../../assets/pizza.jpg") ;
+   
+    background-size: contain; 
 }
 }
 

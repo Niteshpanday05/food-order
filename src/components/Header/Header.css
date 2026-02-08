@@ -1,12 +1,20 @@
 .header{
     height: 34vw;
     margin: 30px auto;
-    background: url('/header_img.png') no-repeat;
     background-size: contain;
     position: relative;
+    width: 100%;;
+    background-color: tomato;
+    border-radius: 18px;
+
+     background-image: url('/burger.png');
+  background-repeat: no-repeat;
+  background-position: right center; 
+  background-size: contain;         
 }
 
 .header-contents{
+      
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -23,11 +31,12 @@
 .header-contents h2{
     font-weight: 500;
    
-    font-size: max(4.5vw, 22px);
+    font-size: max(3.5vw, 18px);
 }
 
 .header-contents p{
     font-size: 1vw;
+    
 }
 
 .header-contents button{

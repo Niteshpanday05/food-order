@@ -10,7 +10,7 @@
   font-size: 36px;
   font-weight: 700;
   text-decoration: none;
-  color: #222;
+  color: tomato;
   
   transition: color 0.3s ease;
   font-family: sans-serif;
@@ -18,7 +18,7 @@
 
 .logo span {
   color: tomato;
-  font-weight: 900;
+  font-weight: 700;
   position: relative;
 }
 

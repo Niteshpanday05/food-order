@@ -1,14 +1,15 @@
 import React from 'react'
 import './Footer.css'
 import { assets } from '../../assets/assets'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
     <div className='footer' id="footer">
         <div className="footer-content">
             <div className="footer-content-left">
-                <img src={assets.logo} alt='' />
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dignissimos natus fuga? Totam commodi sint, earum ipsum consequuntur odit error nostrum blanditiis vel, sequi, eveniet dolorum modi accusantium sed dolorem.</p>
+                <Link to='/' className="logo"> Food <span>Express</span></Link> 
+                <p>Food Express brings delicious meals straight to your doorstep, fast and fresh. We partner with trusted local restaurants to ensure every bite is tasty and satisfying.</p>
                 <div className="footer-social-icons">
                     <img src={assets.facebook_icon} alt="" />
                     <img src={assets.twitter_icon} alt="" />
