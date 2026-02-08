@@ -17,7 +17,7 @@ const Navbar = ({setShowLogin}) => {
   
   return (
     <div className="navbar">
-     <Link to='/' className="logo">Food Express</Link> 
+     <Link to='/' className="logo"> Food <span>Express</span></Link> 
       
       <ul className="navbar-menu">
         {menus.map((item) => (
