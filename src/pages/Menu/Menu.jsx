@@ -1,83 +1,81 @@
-import { useState, useMemo, useEffect } from "react";
-import './Menu.css'
-
-const MENU_DATA = [
-  { id: 1, name: "Pizza", category: "Fast Food", price: 12 },
-  { id: 2, name: "Burger", category: "Fast Food", price: 8 },
-  { id: 3, name: "Pasta", category: "Italian", price: 10 },
-  { id: 4, name: "Salad", category: "Healthy", price: 6 },
-  { id: 5, name: "Sandwich", category: "Healthy", price: 7 },
-];
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/cartSlice";
+import { foodData } from "../data/foodData";
+import "./Menu.css";
 
 const Menu = () => {
+  const dispatch = useDispatch();
+  const [category, setCategory] = useState("All");
   const [search, setSearch] = useState("");
-  const [debouncedSearch, setDebouncedSearch] = useState("");
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [filteredFood, setFilteredFood] = useState(foodData);
 
-  // 🔹 Debounce logic
+  const categories = ["All", ...new Set(foodData.map(i => i.category))];
+
+  // 🔹 Debounced Search + Category Filter
   useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedSearch(search);
-    }, 300); // 300ms delay
+    const timer = setTimeout(() => {
+      let data = foodData;
 
-    return () => clearTimeout(handler);
-  }, [search]);
+      if (category !== "All") {
+        data = data.filter(item => item.category === category);
+      }
 
-  const categories = useMemo(() => {
-    return ["All", ...new Set(MENU_DATA.map(item => item.category))];
-  }, []);
+      if (search) {
+        data = data.filter(item =>
+          item.name.toLowerCase().includes(search.toLowerCase())
+        );
+      }
 
-  const filteredMenu = useMemo(() => {
-    return MENU_DATA.filter(item => {
-      const matchSearch = item.name
-        .toLowerCase()
-        .includes(debouncedSearch.toLowerCase());
+      setFilteredFood(data);
+    }, 300);
 
-      const matchCategory =
-        activeCategory === "All" || item.category === activeCategory;
-
-      return matchSearch && matchCategory;
-    });
-  }, [debouncedSearch, activeCategory]);
+    return () => clearTimeout(timer);
+  }, [search, category]);
 
   return (
-    <div className="menu">
-      {/* 🔍 Search Input */}
+    <section className="menu">
+      <h2>Explore Our Menu</h2>
+
+      {/* 🔍 Search */}
       <input
-        type="text"
+        className="menu-search"
         placeholder="Search food..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
 
       {/* 🏷 Categories */}
-      <div className="categories">
+      <div className="menu-categories">
         {categories.map(cat => (
           <button
             key={cat}
-            onClick={() => setActiveCategory(cat)}
-            className={activeCategory === cat ? "active" : ""}
+            className={category === cat ? "active" : ""}
+            onClick={() => setCategory(cat)}
           >
             {cat}
           </button>
         ))}
       </div>
 
-      {/* 🍽 Menu Items */}
-      <div className="menu-grid">
-        {filteredMenu.length ? (
-          filteredMenu.map(item => (
-            <div key={item.id} className="menu-card">
+      {/* 🍔 Food Items */}
+      <div className="menu-items">
+        {filteredFood.length > 0 ? (
+          filteredFood.map(item => (
+            <div className="menu-card" key={item.id}>
+              <img src={item.image} alt={item.name} />
               <h3>{item.name}</h3>
-              <p>{item.category}</p>
-              <strong>${item.price}</strong>
+              <p>Rs. {item.price}</p>
+              <button onClick={() => dispatch(addToCart(item))}>
+                Add to Cart
+              </button>
             </div>
           ))
         ) : (
-          <p>No items found</p>
+          <p className="no-result">No food found 😕</p>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 
