@@ -1,5 +1,7 @@
 import React from "react";
-import "./Header.css"
+import "./Header.css";
+import { Link } from "react-router-dom";
+import Button from "../ui/Button/Button";
 
 const Header = () => {
   return (
@@ -7,9 +9,14 @@ const Header = () => {
       <div className="header-contents">
         <h2>Order Your Favourite Food. </h2>
         <p>
-         “Life’s too short for boring meals. Get your favorite foods delivered hot, fresh, and fast with just a few clicks.”
+          “Life’s too short for boring meals. Get your favorite foods delivered
+          hot, fresh, and fast with just a few clicks.”
         </p>
-        <button>View Menu</button>
+        
+
+        <Button as={Link} to="/menu" variant="outline">
+          Explore Menu
+        </Button>
       </div>
     </div>
   );
