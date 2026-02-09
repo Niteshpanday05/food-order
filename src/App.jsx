@@ -10,14 +10,14 @@ import LoginPopup from "./components/LoginPopup/LoginPopup";
 import About from "./pages/About/About";
 import Menu from "./pages/Menu/Menu";
 import Contact from "./pages/Contact/Contact";
+import Services from "./pages/Services/Services";
 
 const App = () => {
-
-  const[showLogin,setShowLogin] = useState(false)
+  const [showLogin, setShowLogin] = useState(false);
 
   return (
     <>
-    {showLogin?<LoginPopup setShowLogin={setShowLogin}/>:<></>}
+      {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
       <div className="app">
         <Navbar setShowLogin={setShowLogin} />
         <Routes>
@@ -25,12 +25,12 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
           <Route path="/about" element={<About />} />
-           {/* <Route path="/menu" element={<Menu />} /> */}
-           <Route path="/contact" element={<Contact/>}/>
-
+          {/* <Route path="/menu" element={<Menu />} /> */}
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
