@@ -3,7 +3,7 @@
   max-width: 1200px;   /* control width */
  width: 80%;
   max-width: 1200px;
-  height: 60vh;     /* control height */
+  height: 30vh;     /* control height */
   margin: 40px auto;
   overflow: hidden;
   position: relative;
@@ -50,7 +50,7 @@
   background: tomato;
   color: white;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .prev,
