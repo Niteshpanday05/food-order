@@ -43,13 +43,13 @@
 
 /* Variants */
 .btn--primary {
-  background-color: #ff6347;
-  color: #fff;
+  background-color:whitesmoke;
+  color: black;
   box-shadow: 0 6px 16px rgba(255, 99, 71, 0.35);
 }
 
 .btn--primary:hover:not(:disabled) {
-  background-color: #e5533d;
+  background-color: white;
   transform: translateY(-1px);
 }
 

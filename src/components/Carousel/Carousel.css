@@ -4,7 +4,7 @@
  width: 80%;
   max-width: 1200px;
   height: 30vh;     /* control height */
-  margin: 40px auto;
+  margin: 20px auto;
   overflow: hidden;
   position: relative;
   border-radius: 15px;
@@ -68,3 +68,23 @@
 
 .prev { left: 15px; }
 .next { right: 15px; }
+
+
+@media(max-width:750px){
+     .carousel{
+        height:25vw;
+         margin: 10px auto;
+
+    }
+    
+.content button {
+  padding: 4px 8px;
+  border: none;
+  background: white;
+  color: black;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+    
+}

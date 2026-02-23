@@ -7,6 +7,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header-contents">
+        <h3>' Best In Town '</h3>
         <h2>Order Your Favourite Food. </h2>
         <p>
           “Life’s too short for boring meals. Get your favorite foods delivered

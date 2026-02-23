@@ -4,19 +4,19 @@ import "./Carousel.css";
 const slides = [
   {
     id: 1,
-    image: "https://picsum.photos/1200/600?random=1",
+    image: "https://images.pexels.com/photos/4021952/pexels-photo-4021952.jpeg",
     title: "Fresh & Delicious",
     description: "Enjoy the best quality food delivered to your door."
   },
   {
     id: 2,
-    image: "https://picsum.photos/1200/600?random=2",
+    image: "https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg",
     title: "Fast Delivery",
     description: "Get your favorite meals in less than 30 minutes."
   },
   {
     id: 3,
-    image: "https://picsum.photos/1200/600?random=3",
+    image: "https://images.pexels.com/photos/4021952/pexels-photo-4021952.jpeg",
     title: "Best Offers",
     description: "Exciting discounts and deals every day."
   }
