@@ -68,3 +68,67 @@
         text-align: center;
     }
 }
+
+
+/* Subscription Container */
+.subscription-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
+
+.subscription-container p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #d1d5db; /* light gray */
+}
+
+/* Form */
+.subscription-form {
+  display: flex;
+  flex-direction: column; /* stack on mobile */
+  gap: 3px;
+}
+
+/* Input */
+.subscription-form input[type="email"] {
+  padding: 4px 12px;
+  border-radius: 50px 50px 50px 50px; /* pill shape */
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  flex: 1;
+}
+
+/* Button */
+.subscription-form button {
+  padding: 6px 10px;
+  border-radius: 50px;
+  border: none;
+  background-color: tomato; /* red */
+  color: white;
+  
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Button hover effect */
+.subscription-form button:hover {
+  background-color: #dc2626; /* darker red */
+}
+
+/* Responsive: Desktop view */
+@media (min-width: 500px) {
+  .subscription-form {
+    flex-direction: row; /* inline input + button */
+  }
+
+  .subscription-form input[type="email"] {
+    border-radius: 50px 0 0 50px; /* left side rounded */
+  }
+
+  .subscription-form button {
+    border-radius: 0 50px 50px 0; /* right side rounded */
+  }
+}

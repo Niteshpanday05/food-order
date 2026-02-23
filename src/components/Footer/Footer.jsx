@@ -46,8 +46,20 @@ const Footer = () => {
             <li>+977-9702003949</li>
             <li>niteshpanday55555@gmail.com</li>
           </ul>
+           <div class="subscription-container">
+          
+            <p>Get the latest updates and offers directly.</p>
+            <form class="subscription-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
         </div>
+        
+        
       </div>
+     
+
       <hr />
       <p className="footer-copyright">
         Copyright 2024 @ Tomato.com- All Right Reserved
