@@ -4,7 +4,14 @@
 
 .food-display h2{
     font-size: max(2vw, 24px);
-    font-weight: 600;
+    font-weight: 500;
+    margin-top: 30px;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color:  #747474;
+    
 }
 
 .food-display-list{

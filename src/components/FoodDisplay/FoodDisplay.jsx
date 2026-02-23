@@ -8,7 +8,27 @@ const FoodDisplay = ({ category }) => {
 
   return (
     <div className="food-display" id="food-display">
-      <h2>Top dishes for you</h2>
+      <h2>All Categories</h2>
+      <div className="food-display-list">
+        {food_list.map((item,index) => {
+            // category filter
+          if ((category === "All" || category === item.category)) {
+            return (
+              <FoodItem
+                key={index}
+                id={item._id}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+                oldPrice={item.oldPrice}
+                image={item.image}
+              />
+            );
+          }
+        })}
+      </div>
+
+       <h2>Popular this month</h2>
       <div className="food-display-list">
         {food_list.map((item,index) => {
             // category filter

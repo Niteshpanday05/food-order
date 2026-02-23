@@ -302,54 +302,5 @@ export const food_list = [
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Pasta"
     },
-    {
-        _id: "26",
-        name: "Tomato Pasta",
-        image: food_26,
-        price: 18,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
-    }, {
-        _id: "27",
-        name: "Creamy Pasta",
-        image: food_27,
-        price: 16,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
-    }, {
-        _id: "28",
-        name: "Chicken Pasta",
-        image: food_28,
-        price: 24,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
-    }, {
-        _id: "29",
-        name: "Buttter Noodles",
-        image: food_29,
-        price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
-    }, {
-        _id: "30",
-        name: "Veg Noodles",
-        image: food_30,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
-    }, {
-        _id: "31",
-        name: "Somen Noodles",
-        image: food_31,
-        price: 20,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
-    }, {
-        _id: "32",
-        name: "Cooked Noodles",
-        image: food_32,
-        price: 15,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
-    }
+   
 ]

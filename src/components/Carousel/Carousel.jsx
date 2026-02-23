@@ -4,7 +4,7 @@ import "./Carousel.css";
 const slides = [
   {
     id: 1,
-    image: "https://images.pexels.com/photos/4021952/pexels-photo-4021952.jpeg",
+    image: "https://images.pexels.com/photos/4109111/pexels-photo-4109111.jpeg",
     title: "Fresh & Delicious",
     description: "Enjoy the best quality food delivered to your door."
   },
