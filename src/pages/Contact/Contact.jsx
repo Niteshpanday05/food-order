@@ -64,7 +64,7 @@ const Contact = () => {
           <h3>Our Office</h3>
           <p>Kathmandu, Nepal</p>
           <p>+977 9800000000</p>
-          <p>support@foodieexpress.com</p>
+          <p>support@foodexpress.com</p>
 
           <div className="info-box">
             🚨 Order issue? Call us for faster resolution.
