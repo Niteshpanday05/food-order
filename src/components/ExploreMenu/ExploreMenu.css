@@ -6,20 +6,27 @@
 
 .explore-menu h1{
     color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 }
 
 .explore-menu-text{
-    max-width: 60%;
-    columns:#808080
+    margin-bottom: 20px;
+    columns:#808080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .explore-menu-list{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     text-align: center;
-    margin: 10px 0px;
+    margin: 6px 0px;
     overflow: hidden;
     overflow-x: scroll;
 
@@ -30,7 +37,7 @@
 }
 
 .explore-menu-list-item img{
-    width: 6.5vw;
+    width: 4.5vw;
     min-width: 80px;
     cursor: pointer;
     border-radius: 50%;
@@ -39,9 +46,9 @@
 }
 
 .explore-menu-list-item p{
-    margin-top: 10px;
+    margin-top: 8px;
     color: #747474;
-    font-size: max(1.4vw, 16px);
+    font-size: max(1.2vw, 16px);
     cursor: pointer;
 }
 
@@ -54,7 +61,7 @@
 
 .explore-menu-list-item img.active{
     border:2px solid tomato;
-    padding: 2px;
+    padding: 1px;
 }
 
 @media(max-width:1050px){

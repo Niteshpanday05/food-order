@@ -50,7 +50,16 @@
   background: tomato;
   color: white;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 6px;
+}
+
+.content button:hover{
+  padding: 10px 20px;
+  border: none;
+  background: rgb(223, 40, 8);
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
 .prev,

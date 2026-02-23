@@ -61,8 +61,8 @@ const Carousel = () => {
         ))}
       </div>
 
-      <button className="prev" onClick={prevSlide}>❮</button>
-      <button className="next" onClick={nextSlide}>❯</button>
+      {/* <button className="prev" onClick={prevSlide}>❮</button>
+      <button className="next" onClick={nextSlide}>❯</button> */}
     </div>
   );
 };
