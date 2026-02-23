@@ -14,12 +14,11 @@ import ProtectedRoute from "./components/ProtectedRoute";
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
 
-  // 👇 Example authentication state
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   return (
     <>
-      {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
+      {showLogin && <LoginPopup setShowLogin={setShowLogin}   setIsAuthenticated={setIsAuthenticated} />}
 
       <div className="app">
         <Navbar setShowLogin={setShowLogin} />
@@ -41,6 +40,7 @@ const App = () => {
           />
 
           <Route
+
             path="/order"
             element={
               <ProtectedRoute
