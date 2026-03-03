@@ -4,48 +4,38 @@ import { assets } from "../../assets/assets";
 import "./SearchIcon.css";
 
 const SearchIcon = () => {
-  const { food_list = [] } = useContext(StoreContext);
+  const context = useContext(StoreContext);
+
+  if (!context) return null; // prevent crash
+
+  const { food_list = [] } = context;
   const [searchTerm, setSearchTerm] = useState("");
   const [results, setResults] = useState([]);
-  const [showDropdown, setShowDropdown] = useState(false);
-
   const containerRef = useRef();
 
-  // Filter results
   useEffect(() => {
-    if (searchTerm.trim() === "") {
+    if (!searchTerm) {
       setResults([]);
-      setShowDropdown(false);
       return;
     }
 
     const filtered = food_list.filter((item) =>
-      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+      item.name?.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    setResults(filtered.slice(0, 5)); // limit results
-    setShowDropdown(true);
+    setResults(filtered.slice(0, 5));
   }, [searchTerm, food_list]);
 
-  // Close dropdown when clicking outside
+  // click outside to close dropdown
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (containerRef.current && !containerRef.current.contains(event.target)) {
-        setShowDropdown(false);
+    const handleClickOutside = (e) => {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        setResults([]);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
-  // Handle search icon click
-  const handleSearchClick = () => {
-    if (searchTerm.trim() !== "") {
-      alert(`Searching for "${searchTerm}"`); // replace with actual search action
-    }
-  };
 
   return (
     <div className="search-container" ref={containerRef}>
@@ -55,26 +45,14 @@ const SearchIcon = () => {
           placeholder="Search food..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          onFocus={() => {
-            if (results.length > 0) setShowDropdown(true);
-          }}
         />
-        <img
-          src={assets.search_icon}
-          alt="Search"
-          className="search-icon"
-          onClick={handleSearchClick}
-        />
+        <img src={assets.search_icon} alt="Search" className="search-icon" />
       </div>
 
-      {showDropdown && results.length > 0 && (
+      {results.length > 0 && (
         <div className="search-dropdown">
           {results.map((item) => (
-            <div
-              key={item._id}
-              className="search-item"
-              onClick={() => alert(`You clicked on ${item.name}`)}
-            >
+            <div key={item._id} className="search-item">
               {item.name}
             </div>
           ))}

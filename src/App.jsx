@@ -10,6 +10,7 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Services from "./pages/Services/Services";
 import ProtectedRoute from "./components/ProtectedRoute";
+import SinglePage from "./components/SinglePage/SinglePage";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -54,6 +55,7 @@ const App = () => {
 
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+           <Route path="/item/:id" element={<SinglePage />} />
           <Route path="/services" element={<Services />} />
         </Routes>
       </div>
