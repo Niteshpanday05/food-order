@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import {Link, NavLink} from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
+import SearchIcon from "../SearchIcon/SearchIcon";
 
 const Navbar = ({setShowLogin}) => {
   const menus = [
@@ -31,7 +32,8 @@ const Navbar = ({setShowLogin}) => {
         ))}
       </ul>
       <div className="navbar-right">
-        <img src={assets.search_icon} alt="" />
+        {/* <img src={assets.search_icon} alt="" /> */}
+        <SearchIcon />
         <div className="navbar-serach-icon">
          <Link to='/cart'> <img src={assets.basket_icon} alt="" /></Link>
           <div className={getTotalCartAmount()===0?"":"dot"}></div>
