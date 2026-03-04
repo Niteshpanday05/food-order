@@ -1,6 +1,6 @@
 .search-container {
   position: relative;
-  width: 300px;
+  width: 280px;
 }
 
 .search-input-wrapper {
@@ -9,39 +9,114 @@
 
 .search-input-wrapper input {
   width: 100%;
-  padding: 8px 35px 8px 10px;
+  padding: 8px 35px 8px 12px;
   border-radius: 20px;
   border: 1px solid #ccc;
   outline: none;
 }
 
-.search-input-wrapper .search-icon {
+.search-icon {
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
   width: 18px;
-  height: 18px;
-  cursor: pointer;
 }
 
 .search-dropdown {
   position: absolute;
-  top: 42px;
   width: 100%;
   background: white;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  max-height: 200px;
+  border-radius: 10px;
+  margin-top: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-height: 300px;
   overflow-y: auto;
   z-index: 1000;
 }
 
 .search-item {
-  padding: 8px 10px;
+  display: flex;
+  gap: 10px;
+  padding: 8px;
   cursor: pointer;
+  transition: background 0.2s;
 }
 
-.search-item:hover {
-  background-color: #f5f5f5;
+.search-item img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.search-item:hover,
+.search-item.active {
+  background: #f5f5f5;
+}
+
+.search-info p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.search-info span {
+  font-size: 13px;
+  color: #666;
+}
+
+.no-result {
+  padding: 10px;
+  text-align: center;
+  color: gray;
+}
+
+mark {
+  background-color: #ffe58f;
+  padding: 0 2px;
+}
+
+@media (max-width: 768px) {
+
+  .search-container {
+    width: 50%;   /* full width on mobile */
+  }
+
+  .search-icon {
+ 
+  right: 2px;
+  
+ 
+}
+
+  .search-input-wrapper input {
+    font-size: 16px; /* better tap typing */
+    padding: 6px 20px 6px 10px;
+    display: none;
+  }
+
+  .search-icon {
+    width: 10px;
+  }
+
+  .search-dropdown {
+    max-height: 250px;
+  }
+
+  .search-item img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .search-input-wrapper input {
+    border-radius: px;
+  }
+
+  .search-dropdown {
+    border-radius: 8px;
+  }
+
 }

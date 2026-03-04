@@ -11,6 +11,7 @@ import Contact from "./pages/Contact/Contact";
 import Services from "./pages/Services/Services";
 import ProtectedRoute from "./components/ProtectedRoute";
 import SinglePage from "./components/SinglePage/SinglePage";
+import FoodDetails from "./components/FoodDstails/FoodDetails";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -56,6 +57,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
            <Route path="/item/:id" element={<SinglePage />} />
+           <Route path="/food/:id" element={<FoodDetails />} />
           <Route path="/services" element={<Services />} />
         </Routes>
       </div>

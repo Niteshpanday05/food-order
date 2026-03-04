@@ -1,0 +1,56 @@
+.food-details {
+  padding: 40px;
+}
+
+.food-main {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.food-main img {
+  width: 350px;
+  border-radius: 12px;
+}
+
+.food-info h2 {
+  margin-bottom: 10px;
+}
+
+.food-info h3 {
+  color: #ff4d4f;
+  margin: 15px 0;
+}
+
+.food-info button {
+  padding: 10px 20px;
+  border: none;
+  background: #ff4d4f;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.recommendation h3 {
+  margin-bottom: 20px;
+}
+
+.recommend-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.recommend-card {
+  width: 180px;
+  cursor: pointer;
+}
+
+.recommend-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.recommend-card span {
+  color: gray;
+  font-size: 14px;
+}
