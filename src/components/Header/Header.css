@@ -48,10 +48,10 @@
 .header-contents button{
     border: none;
     color: #747474;
-    font-weight: 500;
-    padding: 1vw 2.3vw;
-    background-color: white;
-    font-size: max(1vw, 13px);
+    font-weight: 200;
+    padding: 0.5vw 2.3vw;
+    background-color: rgb(251, 250, 250);
+    font-size: max(0.5vw, 13px);
     border-radius: 50px;
 }
 
