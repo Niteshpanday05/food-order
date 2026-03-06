@@ -11,9 +11,9 @@
   color: white;
   padding: 80px 20px 120px;
   text-align: center;
-  background-image: url("../../assets/pizza.jpg") ;
+  background-image: url("../../assets/food_29.png") ;
    
-    background-size: contain; 
+    background-size:initial; 
 }
 }
 
