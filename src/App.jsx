@@ -11,7 +11,9 @@ import Contact from "./pages/Contact/Contact";
 import Services from "./pages/Services/Services";
 import ProtectedRoute from "./components/ProtectedRoute";
 import SinglePage from "./components/SinglePage/SinglePage";
-import FoodDetails from "./components/FoodDstails/FoodDetails";
+import FoodDetails from "./components/foodDetails/FoodDetails";
+
+
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
