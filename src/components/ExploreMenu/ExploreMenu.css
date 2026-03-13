@@ -5,7 +5,7 @@
 }
 
 .explore-menu h1{
-    color: #262626;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
 
 .explore-menu-text{
     margin-bottom: 20px;
-    columns:#808080;
+    columns:black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,6 +51,8 @@
    justify-content: space-between;
   align-items:center;
   text-align: center;
+   font-size:32px;
+  font-weight:700;
    
 }
 
@@ -59,7 +61,7 @@
   font-size:16px;
   font-weight:500;
   cursor:pointer;
-  color:#444;
+  color:black;
   padding:8px 0;
   transition:color 0.3s ease;
 }

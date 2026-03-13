@@ -108,19 +108,19 @@ export const menu_list = [
         menu_image: menu_6
     },
      {
-        menu_name: "Pure Veg",
+        menu_name: "Biryani",
         menu_image: menu_7
     },
      {
-        menu_name: "Pure Veg",
+        menu_name: "Sekwa",
         menu_image: menu_8
     },
      {
-        menu_name: "Pure Veg",
+        menu_name: "Pizza",
         menu_image: menu_7
     },
      {
-        menu_name: "Pure Veg",
+        menu_name: "Popular",
         menu_image: menu_6
     },
    
@@ -129,7 +129,7 @@ export const menu_list = [
         menu_image: menu_7
     },
      {
-        menu_name: "Pasta",
+        menu_name: "Burger",
         menu_image: menu_1
     },
     {
