@@ -19,17 +19,72 @@
     justify-content: center;
     align-items: center;
 }
-
+/* 
 .explore-menu-list{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     text-align: center;
-    margin: 6px 0px;
+   
     overflow: hidden;
     overflow-x: scroll;
+    padding: 10px 15px;
+     cursor: pointer;
+ 
+  
 
+}
+
+.explore-menu-list-item.active{
+  background-color:tomato;
+  color:black;
+  border-radius:5px;
+  padding: 2px;
+  display: flex;
+  text
+
+} */
+ .explore-menu-list{
+  display:flex;
+  gap:20px;
+   justify-content: space-between;
+  align-items:center;
+  text-align: center;
+   
+}
+
+.explore-menu-list-item{
+  position:relative;
+  font-size:16px;
+  font-weight:500;
+  cursor:pointer;
+  color:#444;
+  padding:8px 0;
+  transition:color 0.3s ease;
+}
+
+/* Hover effect */
+.explore-menu-list-item:hover{
+  color:#ff6347;
+}
+
+/* underline base */
+.explore-menu-list-item::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:3px;
+  background:linear-gradient(90deg,#ff6347,#ff9966);
+  border-radius:5px;
+  transition:width 0.3s ease;
+}
+
+/* active underline */
+.explore-menu-list-item.active::after{
+  width:100%;
 }
 
 .explore-menu-list::-webkit-scrollbar{
