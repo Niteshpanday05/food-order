@@ -14,7 +14,7 @@
 
 .explore-menu-text{
     margin-bottom: 20px;
-    columns:black;
+    columns:rgb(233, 20, 20);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +51,7 @@
    justify-content: space-between;
   align-items:center;
   text-align: center;
-   font-size:32px;
+   font-size:10px;
   font-weight:700;
    
 }
@@ -59,9 +59,9 @@
 .explore-menu-list-item{
   position:relative;
   font-size:16px;
-  font-weight:500;
+  font-weight:600;
   cursor:pointer;
-  color:black;
+  color:rgb(21, 1, 1);
   padding:8px 0;
   transition:color 0.3s ease;
 }
