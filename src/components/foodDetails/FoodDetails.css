@@ -18,21 +18,21 @@
 }
 
 .food-info h3 {
-  color: #ff4d4f;
+  color: tomato;
   margin: 15px 0;
 }
 
 .food-info button {
   padding: 10px 20px;
   border: none;
-  background: #ff4d4f;
+  background: tomato;
   color: white;
   border-radius: 6px;
   cursor: pointer;
 }
 
 .recommendation h3 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .recommend-grid {
