@@ -58,14 +58,14 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    gap:20px;
+    gap:14px;
 }
 
 .navbar button {
     display: flex;           /* make button a flex container */
     justify-content: center; /* horizontal center */
     align-items: center;     /* vertical center */
-    padding: 4px 16px;
+    padding: 4px 12px;
     border-radius: 50px;
     font-size: 16px;
     border: 2px solid #49557e;
