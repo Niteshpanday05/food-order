@@ -12,6 +12,7 @@ import Services from "./pages/Services/Services";
 import ProtectedRoute from "./components/ProtectedRoute";
 import SinglePage from "./components/SinglePage/SinglePage";
 import FoodDetails from "./components/foodDetails/FoodDetails";
+import Menu from "./pages/Menu/Menu"
 
 
 
@@ -61,6 +62,7 @@ const App = () => {
            <Route path="/item/:id" element={<SinglePage />} />
            <Route path="/food/:id" element={<FoodDetails />} />
           <Route path="/services" element={<Services />} />
+           <Route path="/menu" element={<Menu />} />
         </Routes>
       </div>
 
