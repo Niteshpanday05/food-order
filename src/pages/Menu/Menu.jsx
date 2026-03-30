@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Menu.css";
+import Pizza from "../../assets/pizza.jpg";
 
 const foodData = [
   {
@@ -7,7 +8,7 @@ const foodData = [
     name: "Margherita Pizza",
     category: "Pizza",
     price: 10,
-    img: "https://via.placeholder.com/150",
+    img: Pizza,
   },
   {
     id: 2,
@@ -75,7 +76,7 @@ const foodData = [
   },
 ];
 
-const categories = ["All", "Pizza", "Burger", "Pasta"];
+const categories = ["All", "Pizza", "Burger", "Pasta", "chowmein", "Biryani"];
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState("All");
