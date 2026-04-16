@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Menu.css";
 import Pizza from "../../assets/pizza.jpg";
+import About from "../../assets/about.jpg";
 
 const foodData = [
   {
@@ -8,35 +9,35 @@ const foodData = [
     name: "Margherita Pizza",
     category: "Pizza",
     price: 10,
-    img: Pizza,
+     img: About,
   },
   {
     id: 2,
     name: "Cheese Burger",
     category: "Burger",
     price: 8,
-    img: "https://via.placeholder.com/150",
+    img: Pizza,
   },
   {
     id: 3,
     name: "Pasta Alfredo",
     category: "Pasta",
     price: 12,
-    img: "https://via.placeholder.com/150",
+    img: About,
   },
   {
     id: 4,
     name: "Veg Pizza",
     category: "Pizza",
     price: 9,
-    img: "https://via.placeholder.com/150",
+    img: About,
   },
   {
     id: 5,
     name: "Chicken Burger",
     category: "Burger",
     price: 11,
-    img: "https://via.placeholder.com/150",
+      img: About,
   },
 
   {
@@ -44,14 +45,14 @@ const foodData = [
     name: "Chicken Burger",
     category: "Burger",
     price: 11,
-    img: "https://via.placeholder.com/150",
+     img: About,
   },
   {
     id: 7,
     name: "Chicken Burger",
     category: "Burger",
     price: 11,
-    img: "https://via.placeholder.com/150",
+     img: About,
   },
   {
     id: 8,
