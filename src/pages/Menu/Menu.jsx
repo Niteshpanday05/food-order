@@ -16,7 +16,7 @@ const foodData = [
     name: "Cheese Burger",
     category: "Burger",
     price: 8,
-    img: Pizza,
+    img: About,
   },
   {
     id: 3,
@@ -59,21 +59,21 @@ const foodData = [
     name: "Chicken Burger",
     category: "Burger",
     price: 11,
-    img: "https://via.placeholder.com/150",
+    img: About,
   },
   {
     id: 9,
     name: "Chicken Burger",
     category: "Burger",
     price: 11,
-    img: "https://via.placeholder.com/150",
+    img: About,
   },
   {
     id: 10,
     name: "Chicken Burger",
     category: "Burger",
     price: 11,
-    img: "https://via.placeholder.com/150",
+    img: About,
   },
 ];
 
