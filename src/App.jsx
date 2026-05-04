@@ -13,6 +13,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import SinglePage from "./components/SinglePage/SinglePage";
 import FoodDetails from "./components/foodDetails/FoodDetails";
 import Menu from "./pages/Menu/Menu"
+import ItemDetails from "./components/ItemDetails/ItemDetails";
 
 
 
@@ -63,6 +64,7 @@ const App = () => {
            <Route path="/food/:id" element={<FoodDetails />} />
           <Route path="/services" element={<Services />} />
            <Route path="/menu" element={<Menu />} />
+            <Route path="/item/:id" element={<ItemDetails />} />
         </Routes>
       </div>
 

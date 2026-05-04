@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Menu.css";
 import Pizza from "../../assets/pizza.jpg";
 import About from "../../assets/about.jpg";
@@ -75,12 +76,48 @@ const foodData = [
     price: 11,
     img: About,
   },
+   {
+    id: 11,
+    name: "Chicken Burger",
+    category: "Burger",
+    price: 11,
+    img: About,
+  },
+   {
+    id: 12,
+    name: "Chicken Burger",
+    category: "Burger",
+    price: 11,
+    img: About,
+  },
+   {
+    id: 13,
+    name: "Chicken Burger",
+    category: "Biryani",
+    price: 11,
+    img: About,
+  },
+   {
+    id: 14,
+    name: "Chicken Burger",
+    category: "pizza",
+    price: 11,
+    img: About,
+  },
+   {
+    id: 15,
+    name: "Chicken Burger",
+    category: "pasta",
+    price: 11,
+    img: About,
+  },
 ];
 
 const categories = ["All", "Pizza", "Burger", "Pasta", "chowmein", "Biryani"];
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const navigate = useNavigate();
 
   const filteredItems =
     activeCategory === "All"
@@ -91,7 +128,6 @@ const Menu = () => {
     <div className="menu">
       <h2 className="menu-title">Our Menu</h2>
 
-      {/* Category Filter */}
       <div className="menu-categories">
         {categories.map((cat, index) => (
           <div
@@ -106,10 +142,14 @@ const Menu = () => {
         ))}
       </div>
 
-      {/* Food Items */}
       <div className="menu-items">
         {filteredItems.map((item) => (
-          <div key={item.id} className="menu-card">
+          <div
+            key={item.id}
+            className="menu-card"
+            onClick={() => navigate(`/item/${item.id}`)}
+            style={{ cursor: "pointer" }}
+          >
             <img src={item.img} alt={item.name} />
             <h3>{item.name}</h3>
             <p>${item.price}</p>
