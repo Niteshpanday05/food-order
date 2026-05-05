@@ -2,27 +2,8 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./ItemDetails.css";
 
-// Example data (replace with your real data import)
-const foodData = [
-  {
-    id: 1,
-    name: "Pizza",
-    price: 12,
-    category: "Pizza",
-    img: "/images/pizza.jpg",
-    description: "Cheesy pizza with fresh toppings and crispy crust.",
-  },
-  {
-    id: 2,
-    name: "Burger",
-    price: 8,
-    category: "Burger",
-    img: "/images/burger.jpg",
-    description: "Juicy burger with fresh veggies and soft bun.",
-  },
-];
 
-const ItemDetails = () => {
+const ItemDetails = (foodData) => {
   const { id } = useParams();
   const navigate = useNavigate();
 
