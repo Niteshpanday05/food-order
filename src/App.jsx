@@ -14,6 +14,7 @@ import SinglePage from "./components/SinglePage/SinglePage";
 import FoodDetails from "./components/foodDetails/FoodDetails";
 import Menu from "./pages/Menu/Menu"
 import ItemDetails from "./components/ItemDetails/ItemDetails";
+import FoodItem from "./components/FoodItem/FoodItem";
 
 
 
@@ -66,7 +67,7 @@ const App = () => {
            <Route path="/menu" element={<Menu />} />
             <Route
           path="/item/:id"
-          element={<ItemDetails foodData={foodData} />}
+          element={<ItemDetails foodData={FoodItem} />}
         />
         </Routes>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./ItemDetails.css";
+import FoodItem from "../FoodItem/FoodItem";
 
 
 const ItemDetails = (foodData) => {
