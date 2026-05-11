@@ -4,65 +4,77 @@ import "./Carousel.css";
 const slides = [
   {
     id: 1,
-    image: "https://images.pexels.com/photos/4109111/pexels-photo-4109111.jpeg",
+    image:
+      "https://images.pexels.com/photos/4109111/pexels-photo-4109111.jpeg",
     title: "Fresh & Delicious",
-    description: "Enjoy the best quality food delivered to your door."
   },
   {
     id: 2,
-    image: "https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg",
+    image:
+      "https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg",
     title: "Fast Delivery",
-    description: "Get your favorite meals in less than 30 minutes."
   },
   {
     id: 3,
-    image: "https://images.pexels.com/photos/4021952/pexels-photo-4021952.jpeg",
+    image:
+      "https://images.pexels.com/photos/4021952/pexels-photo-4021952.jpeg",
     title: "Best Offers",
-    description: "Exciting discounts and deals every day."
-  }
+  },
 ];
+
+// Clone first slide
+const extendedSlides = [...slides, slides[0]];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [transition, setTransition] = useState(true);
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) =>
-      prev === slides.length - 1 ? 0 : prev + 1
-    );
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? slides.length - 1 : prev - 1
-    );
-  };
-
-  // Auto Slide
   useEffect(() => {
-    const interval = setInterval(nextSlide, 4000);
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => prev + 1);
+    }, 3000);
+
     return () => clearInterval(interval);
   }, []);
+
+  const handleTransitionEnd = () => {
+    // When reaching cloned slide
+    if (currentIndex === slides.length) {
+      setTransition(false);
+      setCurrentIndex(0);
+    }
+  };
+
+  useEffect(() => {
+    if (!transition) {
+      setTimeout(() => {
+        setTransition(true);
+      }, 50);
+    }
+  }, [transition]);
 
   return (
     <div className="carousel">
       <div
         className="carousel-track"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        onTransitionEnd={handleTransitionEnd}
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`,
+          transition: transition
+            ? "transform 0.6s ease-in-out"
+            : "none",
+        }}
       >
-        {slides.map((slide) => (
-          <div className="slide" key={slide.id}>
+        {extendedSlides.map((slide, index) => (
+          <div className="slide" key={index}>
             <img src={slide.image} alt={slide.title} />
+
             <div className="content">
               <h2>{slide.title}</h2>
-              <p>{slide.description}</p>
-              <button>Order Now</button>
             </div>
           </div>
         ))}
       </div>
-
-      {/* <button className="prev" onClick={prevSlide}>❮</button>
-      <button className="next" onClick={nextSlide}>❯</button> */}
     </div>
   );
 };
